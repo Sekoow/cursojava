@@ -2,6 +2,12 @@
 O projeto pode ser utilizado como base para a construção de uma aplicação de cadastro e consultas simples.
 A aplicação utiliza as seguintes tecnologias:
 
+ADV
+Alecsander Fernandes
+Diogo Barella
+Vinicius Rosa
+Wladimir Ribeiro
+
 	1. Java 8 e JPA
 	2. Hibernate e Entity Manager
 	3. JavaFX
