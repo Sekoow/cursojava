@@ -8,6 +8,8 @@ Diogo Barella
 Vinicius Rosa
 Wladimir Ribeiro
 
+Fazendo um teste de alteração. Se deu certo, coloquem um SIM.
+
 	1. Java 8 e JPA
 	2. Hibernate e Entity Manager
 	3. JavaFX
