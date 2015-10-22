@@ -4,6 +4,7 @@ import com.bigriver.samples.dao.PessoaDAO;
 import com.bigriver.samples.model.Endereco;
 import com.bigriver.samples.model.Pessoa;
 import com.bigriver.samples.model.Endereco.Estado;
+import com.bigriver.samples.model.Apartamento;
 
 /**
  * Classe para testar ações de cadastro ao BD
@@ -15,6 +16,7 @@ public class TestarCadastros {
 		//Cria uma Entidade Pessoa, e seu Endereco
 		Pessoa pessoa = new Pessoa();
 		Endereco endereco = new Endereco();
+		Apartamento apartamento = new Apartamento();
 		
 		//Adiciona os dados nas Entidades
 		pessoa.setNome("João Pedro Butiá");

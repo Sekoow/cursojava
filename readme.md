@@ -1,14 +1,14 @@
-# Projeto Exemplo #
-O projeto pode ser utilizado como base para a construção de uma aplicação de cadastro e consultas simples.
-A aplicação utiliza as seguintes tecnologias:
+# Dados do Sistema #
+O sistema é designado para registro de compra e venda de apartamentos.
 
+# Equipe REsponsável #
 ADV
 Alecsander Fernandes
 Diogo Barella
 Vinicius Rosa
 Wladimir Ribeiro
 
-Fazendo um teste de altera��o. Se deu certo, coloquem um SIM.
+Fazendo um teste de altera��o. Se deu certo, coloquem um SIM.
 
 	1. Java 8 e JPA
 	2. Hibernate e Entity Manager
