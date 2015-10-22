@@ -8,6 +8,8 @@ Diogo Barella
 Vinicius Rosa
 Wladimir Ribeiro
 
+esse é um commite de teste
+
 Fazendo um teste de altera��o. Se deu certo, coloquem um SIM.
 
 	1. Java 8 e JPA
