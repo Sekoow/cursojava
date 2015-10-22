@@ -1,5 +1,10 @@
 package com.bigriver.samples.model;
 
+import javax.persistence.Id;
+import javax.persistence.OneToOne;
+
+import com.dooapp.fxform.annotation.NonVisual;
+
 public class Apartamento {
 	
 	private String endereco;
@@ -7,7 +12,20 @@ public class Apartamento {
 	private float tamanho;
 	private int numero;
 	
+	@NonVisual
+	private int codAp;	
 	
+	@NonVisual
+	Venda venda;
+	
+	
+	@Id
+	public int getCodAp() {
+		return codAp;
+	}
+	public void setCodAp(int codAp) {
+		this.codAp = codAp;
+	}
 	public String getEndereco() {
 		return endereco;
 	}
@@ -33,6 +51,12 @@ public class Apartamento {
 		this.numero = numero;
 	}
 	
-	
+	@OneToOne(mappedBy = "apartamento")
+	public Venda getVenda() {
+		return venda;
+	}
+	public void setVenda(Venda venda) {
+		this.venda = venda;
+	}
 
 }

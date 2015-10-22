@@ -1,6 +1,8 @@
 package com.bigriver.samples;
 
+import com.bigriver.samples.dao.ApartamentoDAO;
 import com.bigriver.samples.dao.PessoaDAO;
+import com.bigriver.samples.model.Apartamento;
 import com.bigriver.samples.model.Endereco;
 import com.bigriver.samples.model.Pessoa;
 import com.bigriver.samples.view.TelaCadastro;
@@ -22,6 +24,10 @@ public class AppCadastro extends Application
 
 	@Override
 	public void start(Stage primaryStage) throws Exception {
+		//Carrega um objeto Apartamento
+		Apartamento apartamento = new Apartamento();
+		//Carrega um DAO de Apartamento
+		ApartamentoDAO daoAp = new ApartamentoDAO();
 		//Carrega um objeto Pessoa e Endereço
 		Pessoa pessoa = new Pessoa();
 		Endereco endereco = new Endereco();
@@ -30,6 +36,8 @@ public class AppCadastro extends Application
 		PessoaDAO dao = new PessoaDAO();
 		//Cria uma tela de cadastro de Pessoas
 		TelaCadastro<Pessoa> cadastro = new TelaCadastro<>("Cadastro Pessoa", pessoa, dao, endereco);
+		//Cria uma tela de cadastro de Apartamento
+		TelaCadastro<Apartamento> cadastroAp = new TelaCadastro<>("Cadastro de Apartamento", apartamento, daoAp);
 		
 		//Cria a Scene (JavaFX) com a tela de Cadastro
 		Scene scene = new Scene(cadastro);
