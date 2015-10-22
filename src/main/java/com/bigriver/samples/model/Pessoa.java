@@ -23,6 +23,11 @@ import com.dooapp.fxform.annotation.NonVisual;
 @Entity
 @EntityListeners(PessoaListener.class)
 public class Pessoa {
+	
+	//Não exibir em formulários
+	@NonVisual
+	private Venda venda;
+	
 	//Não exibir em formulários
 	@NonVisual
 	private int id;
@@ -86,4 +91,15 @@ public class Pessoa {
 	public String toString() {
 		return nome;
 	}
+
+	@OneToOne(mappedBy="pessoa")
+	public Venda getVenda() {
+		return venda;
+	}
+
+	public void setVenda(Venda venda) {
+		this.venda = venda;
+	}
+	
+	
 }

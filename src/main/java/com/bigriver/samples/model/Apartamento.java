@@ -1,10 +1,13 @@
 package com.bigriver.samples.model;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.OneToOne;
 
 import com.dooapp.fxform.annotation.NonVisual;
 
+@Entity
 public class Apartamento {
 	
 	private String endereco;
@@ -20,6 +23,7 @@ public class Apartamento {
 	
 	
 	@Id
+	@GeneratedValue
 	public int getCodAp() {
 		return codAp;
 	}

@@ -1,5 +1,6 @@
 package com.bigriver.samples.model;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -42,9 +43,11 @@ public class Endereco {
 		this.id = id;
 	}
 	
+//	@Column(columnDefinition="")
 	public String getRua() {
 		return rua;
 	}
+	
 	public void setRua(String rua) {
 		this.rua = rua;
 	}
