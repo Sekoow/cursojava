@@ -2,6 +2,9 @@ package com.bigriver.samples.dao;
 
 import java.util.Collection;
 
+import javax.persistence.EntityManager;
+
+import com.bigriver.samples.BancoDeDados;
 import com.bigriver.samples.model.Venda;
 
 
@@ -10,7 +13,16 @@ public class VendaDAO implements DAO<Venda> {
 	@Override
 	public Venda salvar(Venda objeto) {
 		// TODO Auto-generated method stub
-		return null;
+		EntityManager gerenteEntidades = BancoDeDados.abreEntityManager();
+		
+		gerenteEntidades.getTransaction().begin();
+		
+		gerenteEntidades.persist(objeto);
+		
+		gerenteEntidades.getTransaction().commit();
+		
+		gerenteEntidades.close();
+		return objeto;
 	}
 
 	@Override

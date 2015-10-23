@@ -1,9 +1,13 @@
 package com.bigriver.samples.model;
 
+import java.util.Date;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.OneToOne;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 
 import com.dooapp.fxform.annotation.NonVisual;
 
@@ -12,6 +16,9 @@ public class Venda {
 	
 	
 	private int codVenda;
+	
+	@NonVisual
+	private Date timestamps;
 	
 
     @NonVisual
@@ -47,6 +54,16 @@ public class Venda {
 	
 	public void setApartamento(Apartamento apartamento) {
 		this.apartamento = apartamento;
+	}
+	
+	@Temporal(TemporalType.TIMESTAMP)
+	public Date Timestamps(){
+		return timestamps;
+	}	
+
+	public void setTimestamps(Date timestamps) {
+		// TODO Auto-generated method stub
+		this.timestamps = timestamps;
 	}
 
 	
